@@ -284,6 +284,8 @@ else(ROS_EDITION STREQUAL "ROS2")
 
   target_include_directories(${PROJECT_NAME} PRIVATE ${livox_sdk_INCLUDE_DIRS})
 
+  set(DISTRO_ROS "jazzy")
+
   # get include directories of custom msg headers
   if(DISTRO_ROS STREQUAL "humble")
     rosidl_get_typesupport_target(cpp_typesupport_target
